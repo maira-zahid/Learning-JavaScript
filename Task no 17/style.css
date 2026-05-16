@@ -1,0 +1,110 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body{
+  background: #f4f7ff;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.container{
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 20px;
+  /* color: #333; */
+    color: #4a6cf7;
+}
+
+.input-group{
+  margin-bottom: 18px;
+}
+
+label{
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+textarea{
+  resize: none;
+  height: 90px;
+}
+
+.radio-group,
+.checkbox-group{
+  margin-top: 8px;
+}
+
+button{
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #4a6cf7;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover{
+  background: #3451c6;
+}
+
+.error{
+  color: red;
+  font-size: 14px;
+}
+
+#output{
+  margin-top: 25px;
+  padding: 15px;
+  background: #eef2ff;
+  border-radius: 10px;
+}
+
+.student-card{
+  margin-bottom: 15px;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  border-left: 5px solid #4a6cf7;
+}
+
+#submitMessage{
+     text-align: center;
+}
+
+@media(max-width:600px){
+
+  .container{
+    padding: 15px;
+  }
+
+  h1{
+    font-size: 24px;
+  }
+
+}
