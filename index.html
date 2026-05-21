@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Management Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======== HEADER ======== -->
+  <div class="header">
+    <h1>🎓 Student Dashboard</h1>
+    <div class="clock" id="clock">00:00:00</div>
+  </div>
+
+  <!-- ======== STATS BOXES ======== -->
+  <div class="stats">
+    <div class="box blue">
+      <h3 id="totalCount">0</h3>
+      <p>Total Students</p>
+    </div>
+    <div class="box green">
+      <h3 id="courseCount">0</h3>
+      <p>Courses</p>
+    </div>
+    <div class="box orange">
+      <h3 id="avgAgeDisplay">0</h3>
+      <p>Average Age</p>
+    </div>
+  </div>
+
+  <!-- ======== MAIN AREA ======== -->
+  <div class="main">
+
+    <!-- ADD STUDENT FORM -->
+    <div class="form-card">
+      <h2>➕ Add New Student</h2>
+
+      <label>Full Name</label>
+      <input type="text" id="nameInput" placeholder="e.g. Ahmed Khan" />
+
+      <label>Age</label>
+      <input type="text" id="ageInput" placeholder="e.g. 20" />
+
+      <label>Course</label>
+      <select id="courseInput">
+        <option value="">-- Select Course --</option>
+        <option>Web Development</option>
+        <option>Data Science</option>
+        <option>Cybersecurity</option>
+        <option>UI/UX Design</option>
+        <option>Graphic Designing</option>
+        <option>Artificial Intelligence</option>
+        <option>Freelauncing</option>
+      </select>
+
+      <p class="error" id="errorMsg"></p>
+
+      <button onclick="addStudent()">Add Student</button>
+    </div>
+
+    <!-- STUDY TIMER -->
+    <div class="form-card timer-card">
+      <h2 class="timer-heading">⏱️ Study Timer</h2>
+      <div class="timer-display" id="timerDisplay">00:00:00</div>
+      <div class="timer-btns">
+        <button class="btn-start" id="startBtn" onclick="startTimer()">▶ Start</button>
+        <button class="btn-pause" id="pauseBtn" onclick="pauseTimer()" disabled>⏸ Pause</button>
+        <button class="btn-reset" onclick="resetTimer()">↺ Reset</button>
+      </div>
+      <p class="timer-info">Sessions: <strong id="sessionCount">0</strong></p>
+    </div>
+
+  </div>
+
+  <!-- ======== STUDENT LIST ======== -->
+  <div class="list-section">
+    <h2>📋 Student List</h2>
+    <input type="text" id="searchBox" placeholder="🔍 Search by name or course..." oninput="searchStudents()" />
+    <div id="studentList">
+      <p class="no-students">No students added yet.</p>
+    </div>
+  </div>
+
+  <!-- ======== POPUP MODAL ======== -->
+  <div class="overlay" id="overlay" onclick="closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="close-btn" onclick="closeModal()">✕</button>
+      <div class="modal-avatar" id="modalAvatar"></div>
+      <h2 id="modalName"></h2>
+      <p id="modalIntro"></p>
+      <hr/>
+      <p id="modalCourseDetail"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
