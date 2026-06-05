@@ -92,31 +92,59 @@ body{
 }
 
 /* Mobile Screens */
-@media (max-width: 480px){
+@media (max-width: 480px) {
 
-    .weather-card{
+    .card {                        /* ✅ fixed from .weather-card */
         width: 95%;
         padding: 20px 12px;
     }
 
-    .search{
-        gap: 2px;
+    .search {
+        gap: 8px;
     }
 
-    .search input{
-         margin-left: -20px;
+    .search input {
         height: 50px;
-        font-size: 16px;
+        font-size: 14px;
         padding: 0 16px;
+        margin-right: 8px;
     }
 
-    .search button{
+    .search button {
         width: 50px;
         height: 50px;
         flex-shrink: 0;
     }
 
-    .search button img{
-        width: 18px;
+    .weather h1 {
+        font-size: 55px;           /* ✅ shrink temperature */
+    }
+
+    .weather h2 {
+        font-size: 30px;           /* ✅ shrink city name */
+    }
+
+    .weather-icon {
+        width: 120px;              /* ✅ shrink icon */
+    }
+
+    .details {
+        padding: 0 5px;            /* ✅ reduce side padding */
+        margin-top: 30px;
+        gap: 10px;
+    }
+
+    .col img {
+        width: 28px;               /* ✅ shrink humidity/wind icons */
+        margin-right: 6px;
+    }
+
+    .humidity, .wind {
+        font-size: 26px;  /*✅ shrink humidity/wind text */
+     }           
+
+    .col p {
+        font-size: 14px;           /* ✅ shrink labels */
     }
 }
+
